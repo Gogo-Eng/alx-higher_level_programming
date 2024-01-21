@@ -13,4 +13,4 @@ if __name__ == "__main__":
         for i in argv:
             if i is not argv[0]:
                 print(f"{numbering}: {i:s}")
-            numbering += 1
+                numbering += 1
