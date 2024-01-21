@@ -6,14 +6,14 @@ if __name__ == "__main__":
     length = len(argv)
 
     if length == 1:
-        print("{:d} arguements.".format(length - 1))
+        print("{:d} arguments.".format(length - 1))
     else:
         numbering = 1
         if length == 2:
-            print(f"{(length - 1):d} arguement:")
+            print(f"{(length - 1):d} argument:")
         else:
-            print(f"{(length - 1):d} arguements:")
+            print("{:d} arguments:".format(length - 1))
         for i in argv:
             if i is not argv[0]:
-                print(f"{numbering:d}: {i:s}")
+                print("{:d}: {:s}".format(numbering, i))
                 numbering += 1
