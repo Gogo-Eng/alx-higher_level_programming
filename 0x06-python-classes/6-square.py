@@ -49,4 +49,4 @@ class Square:
             for i in range(self._Gogo[1]):
                 print()
         for i in range(self._Square__size):
-            print(f"{' ' * self._Gogo[0] + '#' * self._Square__size}")
+            print(f"{' ' * self._Gogo[0]} {'#' * self._Square__size}")
