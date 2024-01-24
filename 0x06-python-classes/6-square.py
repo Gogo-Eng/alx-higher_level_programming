@@ -45,8 +45,8 @@ class Square:
     def my_print(self):
         if self._Square__size == 0:
             print()
-        else:
+        elif self._Gogo[1] > 0:
             for i in range(self._Gogo[1]):
                 print()
-            for i in range(self._Square__size):
-                print(f"{' ' * self._Gogo[0] + '#' * self._Square__size}")
+        for i in range(self._Square__size):
+            print(f"{' ' * self._Gogo[0] + '#' * self._Square__size}")
