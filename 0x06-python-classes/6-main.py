@@ -6,7 +6,10 @@ my_square_1.my_print()
 
 print("--")
 
-my_square_2 = Square(3, (1, 1))
+my_square_2 = Square(2, (1, -2))
+print(my_square_2.size)
+print(my_square_2.area())
+print(my_square_2.position)
 my_square_2.my_print()
 
 print("--")
