@@ -3,7 +3,7 @@
 def list_division(my_list_1, my_list_2, list_length):
 
     length = []
-    #list_length = len(length)
+
     try:
         for i in range(list_length):
             try:
@@ -20,7 +20,4 @@ def list_division(my_list_1, my_list_2, list_length):
     except Exception as e:
         print(e)
     finally:
-        #if len(my_list_1) != len(my_list_2):
-         #    print("out of range")
-    
         return length
