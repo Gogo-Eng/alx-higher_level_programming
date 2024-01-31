@@ -52,4 +52,5 @@ class Rectangle:
                 result.append("#" * self.__width + "\n")
         return ''.join(result)
     #def __repr__(self):
+    jiudhuihuihyu
        
