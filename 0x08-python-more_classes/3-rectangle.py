@@ -47,8 +47,8 @@ class Rectangle:
             return 2 * (int(self.__width) + int(self.__height))
     def __str__(self):
         result = []
-        for i in range(self.__height):
-           result.append("#" * self.__width + "\n")
+        if self.__width > 0 and self.__height > 0:
+            for i in range(self.__height):
+                result.append("#" * self.__width + "\n")
         return ''.join(result)
-    #def __repr__(self):
-       
+        
