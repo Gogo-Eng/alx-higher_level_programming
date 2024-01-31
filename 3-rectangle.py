@@ -38,18 +38,21 @@ class Rectangle:
         self.__height = value
 
     def area(self):
+        """area method"""
         return self.__width * self.__height
 
     def perimeter(self):
+        """perimeter method"""
         if self.__width == 0 or self.__height == 0:
             return 0
         else:
             return 2 * (int(self.__width) + int(self.__height))
+
     def __str__(self):
+        """str method"""
+        if self.__width == 0 or self.__height == 0:
+            return ''
         result = []
-        if self.__width > 0 and self.__height > 0:
-            for i in range(self.__height):
-                result.append("#" * self.__width + "\n")
+        for i in range(self.__height):
+            result.append("#" * self.__width + "\n")
         return ''.join(result)
-    #def __repr__(self):
-       
