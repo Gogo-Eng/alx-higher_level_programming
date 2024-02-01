@@ -50,5 +50,5 @@ class Rectangle:
         result = []
         if self.__width > 0 and self.__height > 0:
             for i in range(self.__height):
-                result.append("#" * self.__width + "\n")
+                result.append("#" * self.__width)
         return ''.join(result)
