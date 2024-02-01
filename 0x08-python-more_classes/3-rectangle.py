@@ -7,7 +7,7 @@
 
 class Rectangle:
     """
-    an empty class Rectangle that defines a rectangle
+    empty class Rectangle that defines a rectangle
     """
     def __init__(self, width=0, height=0):
         self.height = height
