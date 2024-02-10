@@ -1,0 +1,17 @@
+'0-add_integer' module
+
+import add_integer function from module
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+
+
+Edge cases
+
+>>> add_integer(-7, -7)
+-14
+
+>>> add_integer("Gogo", "Progress")
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
