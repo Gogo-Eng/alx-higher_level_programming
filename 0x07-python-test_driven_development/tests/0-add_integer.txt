@@ -1,6 +1,7 @@
 '0-add_integer' module
 
 import add_integer function from module
+----------------------------------------
 
 >>> add_integer = __import__('0-add_integer').add_integer
 
