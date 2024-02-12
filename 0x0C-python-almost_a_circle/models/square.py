@@ -1,44 +1,58 @@
 #!/usr/bin/python3
-"""module that defines the Square class"""
+"""
+module that defines the Square class
+"""
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """Class Square that inherits from Rectangle class"""
+    """
+    Class Square that inherits from Rectangle class
+    """
 
     def __init__(self, size, x=0, y=0, id=None):
-        """super initializing attributes"""
+        """
+        super initializing attributes
+        """
         super().__init__(
             size, size, x, y, id
         )
 
     def __str__(self):
-        """returns str representation of the class"""
-        st = "[{}] ({}) {}/{} - {}".format(
+        """
+         str function
+        """
+        sttrt = "[{}] ({}) {}/{} - {}".format(
             self.__class__.__name__,
             self.id,
             self.x,
             self.y,
             self.width
         )
-        return st
+        return sttrt
 
     @property
     def size(self):
-        """getter size"""
+        """
+        getter
+        """
         return self.width
 
     @size.setter
     def size(self, value):
-        """setter size"""
+        """
+        setter
+        """
         self.width = value
         self.height = value
 
     def update(self, *args, **kwargs):
-        """Assigns class attributes to argument
+        """
+        Assigns class attributes to argument
             Args:
                 args: non key-word argument
-                kwargs: keyword argument"""
+                kwargs: keyword argument
+        """
         if len(args) > 0:
             for i in range(len(args)):
                 if i == 0:
