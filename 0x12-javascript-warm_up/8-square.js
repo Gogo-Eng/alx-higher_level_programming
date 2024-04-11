@@ -2,7 +2,7 @@
 let i, j;
 const x = process.argv[2];
 if (!parseInt(x)) {
-  console.log('Missing number of occurrences');
+  console.log('Missing size');
 } else {
   for (i = 0; i < Number(x); i++) {
     let row = '';
