@@ -5,7 +5,7 @@ function factorial (firstArg) {
   }
 
   if (isNaN(firstArg)) {
-    return NaN;
+    return 1;
   }
 
   if (firstArg === 1) {
