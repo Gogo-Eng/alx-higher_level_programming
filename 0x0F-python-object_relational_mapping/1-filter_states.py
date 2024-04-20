@@ -13,8 +13,7 @@ if __name__ == "__main__":
                          passwd=mysql_password, db=database, port=3306)
 
     mycursor = db.cursor()
-    Q1 = "SELECT * FROM states ORDER BY id ASC"
-    mycursor.execute(Q1)
+    mycursor.execute("SELECT * FROM states ORDER BY id ASC")
     table = mycursor.fetchall()
     for l in table:
         if l[1].startswith("N"):
