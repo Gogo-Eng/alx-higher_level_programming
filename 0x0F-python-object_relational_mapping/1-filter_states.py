@@ -15,7 +15,7 @@ if __name__ == "__main__":
                          passwd=mysql_password, db=database, port=3306)
 
     mycursor = db.cursor()
-    Q1 = ("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+    Q1 = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC"
     mycursor.execute(Q1)
     table = mycursor.fetchall()
     for l in table:
