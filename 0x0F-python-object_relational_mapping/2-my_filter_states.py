@@ -12,8 +12,8 @@ if __name__ == "__main__":
                          database=argv[3], port=3306)
     mycursor = db.cursor()
 
-    Q = "SELECT * FROM states WHERE name LIKE %s ORDER BY id ASC"
-    mycursor.execute(Q, (state_name_search + '%',))
+    Q = "SELECT * FROM states WHERE name LIKE '{}'ORDER BY id ASC"
+    mycursor.execute(Q.format(state_name_search))
     list = mycursor.fetchall()
     for l in list:
         print(l)
