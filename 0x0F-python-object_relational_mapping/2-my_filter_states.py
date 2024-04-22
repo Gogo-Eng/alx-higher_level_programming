@@ -1,19 +1,18 @@
 #!/usr/bin/python3
+""" print states starting with capital N"""
 
-"""list all states corresponding to the argument"""
 import MySQLdb
 from sys import argv
 
 if __name__ == "__main__":
-
-    state_name_search = argv[4]
-
-    db = MySQLdb.connect(host="localhost", user=argv[1], passwd=argv[2],
-                         database=argv[3], port=3306)
+    db = MySQLdb.connect(host="localhost", port=3306, charset="utf8",
+                         user=argv[1], passwd=argv[2], db=argv[3])
     mycursor = db.cursor()
-
-    Q = "SELECT * FROM states WHERE name LIKE '{}'ORDER BY id ASC"
-    mycursor.execute(Q.format(state_name_search))
-    list = mycursor.fetchall()
-    for l in list:
-        print(l)
+    query = """ SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY
+        states.id ASC"""
+    mycursor.execute(query.format(argv[4]))
+    query_rows = mycursor.fetchall()
+    for row in query_rows:
+        print(row)
+    mycursor.close()
+    db.close()
