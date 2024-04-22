@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 """list all states corresponding to the argument"""
+
 import MySQLdb
 from sys import argv
 
